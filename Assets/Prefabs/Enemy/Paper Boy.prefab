@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2820762016517127432}
   - component: {fileID: 226346021143185704}
   - component: {fileID: 6564411744009587081}
+  - component: {fileID: 5195896643007409944}
   m_Layer: 0
   m_Name: Paper Boy
   m_TagString: Untagged
@@ -27,12 +28,12 @@ Transform:
   m_GameObject: {fileID: 144453969373935874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.96, y: -2.63, z: 0}
-  m_LocalScale: {x: 0.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 873366960070062432}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &226346021143185704
 SpriteRenderer:
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: -460849789
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.09223923, g: 0.054957304, b: 0.8962264, a: 1}
+  m_Sprite: {fileID: -949069888, guid: 4473737faba653344b3d66b844bb57fd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,7 +103,7 @@ MonoBehaviour:
   paperBoyRadius: 2
   throwCooldown: 2
   throwForce: 8
-  hitOffset: {x: 0, y: 2.2, z: 0}
+  hitOffset: {x: 0, y: 1.64, z: 0}
   bounds: {x: 18, y: 7, z: 2}
   playerLayer:
     serializedVersion: 2
@@ -110,6 +111,27 @@ MonoBehaviour:
   faceLeft: 1
   paper: {fileID: 8842758153779332655, guid: 91f278dfa49c2e245bb8a69ebf63c482, type: 3}
   spawnPoint: {fileID: 5110408110838875554}
+--- !u!95 &5195896643007409944
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144453969373935874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa434d1a0d318aa40a241996969d4392, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5110408110838875554
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5110408110838875554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
