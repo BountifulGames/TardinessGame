@@ -12,22 +12,31 @@ public class Timer : MonoBehaviour
     private float seconds;
 
 
+    private void Awake()
+    {
+        GameManager.gm.timerOn = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (timeValue > 0)
+        if(GameManager.gm.timerOn == true)
         {
-            timeValue -= Time.deltaTime;
-        }
-        else
-        {
-            //never display negative time value
-            timeValue = 0;
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
+            }
+            else
+            {
+                //never display negative time value
+                timeValue = 0;
 
-            //run gameover method
-        }
+                //run gameover method
+            }
 
-        DisplayTime(timeValue);
+            DisplayTime(timeValue);
+        }
+        
     }
 
     void DisplayTime(float timeToDisplay)
@@ -61,6 +70,7 @@ public class Timer : MonoBehaviour
         {
           GameManager.gm.levelOneMin = minutes;
           GameManager.gm.levelOneSec = seconds;
+          GameManager.gm.levelOneGrade = GameManager.gm.currentGrade;
           Debug.Log(GameManager.gm.levelOneMin + "min");
           Debug.Log(GameManager.gm.levelOneSec + "sec");
         }
@@ -68,6 +78,7 @@ public class Timer : MonoBehaviour
         {
                 GameManager.gm.levelTwoMin = minutes;
                 GameManager.gm.levelTwoSec = seconds;
+                GameManager.gm.levelTwoGrade = GameManager.gm.currentGrade;
                 Debug.Log(GameManager.gm.levelTwoMin + "min");
                 Debug.Log(GameManager.gm.levelTwoSec + "sec");
         }

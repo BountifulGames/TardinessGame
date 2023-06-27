@@ -8,7 +8,9 @@ public class Grade : MonoBehaviour
     [Header("Grade Values")]
     public float startingGrade;
     public float maxGrade;
-    private float currentGrade;
+
+    [HideInInspector]
+    public float currentGrade;
 
     [Header("References")]
     public TMP_Text gradeText;
@@ -27,22 +29,22 @@ public class Grade : MonoBehaviour
 
     void Awake()
     {
-        currentGrade = startingGrade;
-        Debug.Log(currentGrade);
-        gradeText.text = "Grade: " + currentGrade;
+        GameManager.gm.currentGrade = startingGrade;
+        Debug.Log(GameManager.gm.currentGrade);
+        gradeText.text = "Grade: " + GameManager.gm.currentGrade;
     }
 
     public void LoseGrade(float _grade)
     {
-        if (currentGrade == 0)
+        if (GameManager.gm.currentGrade == 0)
         {
             //game over
             Debug.Log("Game Over");
         }
 
-        currentGrade = Mathf.Clamp(currentGrade - _grade, 0, maxGrade);
+        GameManager.gm.currentGrade = Mathf.Clamp(GameManager.gm.currentGrade - _grade, 0, maxGrade);
 
-        if(currentGrade  > 0)
+        if(GameManager.gm.currentGrade > 0)
         {
             StartCoroutine(Invulnerability());
 
@@ -55,23 +57,23 @@ public class Grade : MonoBehaviour
             float z = Random.Range(.275f, 1f);
             DropGrade(z);
 
-            gradeText.text = "Grade: " + currentGrade;
+            gradeText.text = "Grade: " + GameManager.gm.currentGrade;
         }
         else
         {
             //player goes down to 0 with no pickups
             StartCoroutine(Invulnerability());
             SoundManager.instance.PlaySound(playerHit1);
-            gradeText.text = "Grade: " + currentGrade;
+            gradeText.text = "Grade: " + GameManager.gm.currentGrade;
         }
         
     }
 
     public void GainGrade(float _grade)
     {
-        currentGrade = Mathf.Clamp(currentGrade + _grade, 0, maxGrade);
-        gradeText.text = "Grade: " + currentGrade;
-        Debug.Log(currentGrade);
+        GameManager.gm.currentGrade = Mathf.Clamp(GameManager.gm.currentGrade + _grade, 0, maxGrade);
+        gradeText.text = "Grade: " + GameManager.gm.currentGrade;
+        Debug.Log(GameManager.gm.currentGrade);
     }
 
     private void DropGrade(float random)

@@ -27,6 +27,8 @@ public class StageEnd : MonoBehaviour
             StartCoroutine(LevelTransition());
             SoundManager.instance.GetComponent<AudioSource>().PlayOneShot(bell, 0.5f);
             timer.GetComponent<Timer>().RecordTime();
+            //stop the timer
+            GameManager.gm.timerOn = false;
 
         }
     }

@@ -6,7 +6,8 @@ using TMPro;
 
 public class WinScreen : MonoBehaviour
 {
-    public TMP_Text winText;
+    public TMP_Text timeText;
+    public TMP_Text gradeText;
 
     private void Awake()
     {
@@ -25,13 +26,18 @@ public class WinScreen : MonoBehaviour
         //remainder of seconds
         float seconds2 = Mathf.FloorToInt(LevelTwo % 60);
 
-        float totalMinutes = Mathf.FloorToInt((minutes1 + minutes2) + (seconds1 + seconds2)/ 60);
+        float totalMinutes = Mathf.FloorToInt((minutes1 + minutes2) + (seconds1 + seconds2) / 60);
         Debug.Log(totalMinutes + "total minutes");
-        float totalSeconds = Mathf.FloorToInt((seconds1+seconds2) % 60);
+        float totalSeconds = Mathf.FloorToInt((seconds1 + seconds2) % 60);
         Debug.Log(totalSeconds + "total seconds");
 
-        //display text with proper formatting
-        winText.text = string.Format("{0:00}:{1:00}", minutes1, seconds1) + "<br>" + string.Format("{0:00}:{1:00}", minutes2, seconds2) + "<br>" + string.Format("{0:00}:{1:00}", totalMinutes, totalSeconds);
+        //display time text with proper formatting
+        timeText.text = string.Format("{0:00}:{1:00}", minutes1, seconds1) + "<br>" + string.Format("{0:00}:{1:00}", minutes2, seconds2) + "<br>" + string.Format("{0:00}:{1:00}", totalMinutes, totalSeconds);
+
+        float gradeAverage = (GameManager.gm.levelOneGrade + GameManager.gm.levelTwoGrade) / 2;
+
+        //displays grade values
+        gradeText.text = GameManager.gm.levelOneGrade + "<br>" + GameManager.gm.levelTwoGrade + "<br>" + gradeAverage;
 
     }
 

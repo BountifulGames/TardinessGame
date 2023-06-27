@@ -6,13 +6,21 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
+
+    [Header("Grade & Timer")]
+    public float currentGrade;
+    public bool timerOn;
+
+    [Header("Score")]
     public float levelOneMin;
     public float levelTwoMin;
     public float levelOneSec;
     public float levelTwoSec;
+    public float levelOneGrade;
+    public float levelTwoGrade;
 
+    [Header("Checkpoint")]
     public Vector2 checkpointLocation;
-    public float currentGrade;
 
     private void Awake()
     {
