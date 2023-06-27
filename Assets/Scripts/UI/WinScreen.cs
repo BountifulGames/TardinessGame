@@ -11,6 +11,12 @@ public class WinScreen : MonoBehaviour
 
     private void Awake()
     {
+        CalculateScore();
+
+    }
+
+    private void CalculateScore()
+    {
         //calculate time elapsed stage 1
         float LevelOne = (GameManager.gm.levelOneMin * 60 + GameManager.gm.levelOneSec);
         //how many minutes remain
@@ -38,9 +44,7 @@ public class WinScreen : MonoBehaviour
 
         //displays grade values
         gradeText.text = GameManager.gm.levelOneGrade + "<br>" + GameManager.gm.levelTwoGrade + "<br>" + gradeAverage;
-
     }
-
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");

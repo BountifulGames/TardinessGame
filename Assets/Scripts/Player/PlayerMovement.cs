@@ -40,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Collision")]
     public bool grounded;
     public float groundLength = 0.6f;
-    public Vector3 groundColliderOffset;
+    public Vector3 groundColliderOffsetX;
+    public Vector3 groundColliderOffsetY;
     private bool crouched = false;
     private bool underPlatform = false;
     public Vector3 ceilingGizmoX;
@@ -64,10 +65,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         bool wasOnGround = grounded;
-        
+
         //checks if either foot(raycast) is touching ground
-        grounded = Physics2D.Raycast(transform.position + groundColliderOffset, Vector2.down, groundLength, groundLayer) || Physics2D.Raycast(transform.position - groundColliderOffset, Vector2.down, groundLength, groundLayer);
-        
+        grounded = Physics2D.Raycast(transform.position + groundColliderOffsetX + groundColliderOffsetY, Vector2.down, groundLength, groundLayer) || Physics2D.Raycast(transform.position - groundColliderOffsetX + groundColliderOffsetY, Vector2.down, groundLength, groundLayer);
+
         underPlatform = CeilingCheck();
         
         //if player is crouching or stuck under ceiling
@@ -207,12 +208,12 @@ public class PlayerMovement : MonoBehaviour
         //displays raycasts in unity
         Gizmos.color = Color.red;
         //gizmos to check grounded under feet
-        Gizmos.DrawLine(transform.position + groundColliderOffset, transform.position + groundColliderOffset + Vector3.down * groundLength);
-        Gizmos.DrawLine(transform.position - groundColliderOffset, transform.position - groundColliderOffset + Vector3.down * groundLength);
+        Gizmos.DrawLine(transform.position + groundColliderOffsetX + groundColliderOffsetY, transform.position + groundColliderOffsetX + groundColliderOffsetY + Vector3.down * groundLength);
+        Gizmos.DrawLine(transform.position - groundColliderOffsetX + groundColliderOffsetY, transform.position - groundColliderOffsetX + groundColliderOffsetY + Vector3.down * groundLength);
 
         //Gizmo for ceiling check parameters
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(playerCollider.bounds.center + new Vector3(0, ceilingOffset.y, 0), new Vector3(0.3600313f, .3f, 1));
+        Gizmos.DrawWireCube(transform.position + new Vector3(0, ceilingOffset.y, 0), new Vector3(0.3600313f, .3f, 1));
     }
 
     //player jump
@@ -257,7 +258,7 @@ public class PlayerMovement : MonoBehaviour
     //checks if there is a ceiling above player
     private bool CeilingCheck()
     {
-        return Physics2D.BoxCast(playerCollider.bounds.center + new Vector3(0, ceilingOffset.y, 0), new Vector2(0.3600313f, .3f), 0f, Vector2.up, 0f, groundLayer);
+        return Physics2D.BoxCast(transform.position + new Vector3(0, ceilingOffset.y, 0), new Vector2(0.3600313f, .3f), 0f, Vector2.up, 0f, groundLayer);
     }
 
     //create dust particle effect

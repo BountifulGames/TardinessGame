@@ -10020,18 +10020,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1757506242982686034, guid: a6894c45a92006345922b50e3d8950b1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757506242982686034, guid: a6894c45a92006345922b50e3d8950b1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757506242982686034, guid: a6894c45a92006345922b50e3d8950b1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3346713733100891980, guid: a6894c45a92006345922b50e3d8950b1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -10044,10 +10032,6 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 7739151445827215298, guid: a6894c45a92006345922b50e3d8950b1, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 8368986686964848503, guid: a6894c45a92006345922b50e3d8950b1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -15706,6 +15690,10 @@ PrefabInstance:
     - target: {fileID: 2246283659995188036, guid: e6dbc8f9e01ba67468070a47710e9fae, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928889947621066056, guid: e6dbc8f9e01ba67468070a47710e9fae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.20002747
       objectReference: {fileID: 0}
     - target: {fileID: 6607903404180667343, guid: e6dbc8f9e01ba67468070a47710e9fae, type: 3}
       propertyPath: m_Pivot.x

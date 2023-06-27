@@ -27,7 +27,7 @@ public class Grade : MonoBehaviour
     
 
 
-    void Awake()
+    void Start()
     {
         GameManager.gm.currentGrade = startingGrade;
         Debug.Log(GameManager.gm.currentGrade);

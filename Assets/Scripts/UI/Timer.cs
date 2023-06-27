@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     private float seconds;
 
 
-    private void Awake()
+    private void Start()
     {
         GameManager.gm.timerOn = true;
     }
