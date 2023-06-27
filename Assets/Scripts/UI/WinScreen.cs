@@ -156,7 +156,7 @@ public class WinScreen : MonoBehaviour
         lgAnim.SetTrigger("FinalGrade");
         //wait again
         yield return new WaitForSeconds(.4f);
-        SoundManager.instance.PlaySound(cheer[cheerValue]);
+       // SoundManager.instance.PlaySound(cheer[cheerValue]);
 
     }
 
