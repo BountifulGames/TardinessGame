@@ -215,7 +215,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Gizmo for ceiling check parameters
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(transform.position + new Vector3(0, ceilingOffset.y, 0), new Vector3(0.3600313f, .3f, 1));
+        Gizmos.DrawWireCube(transform.position + new Vector3(0, ceilingOffset.y, 0), new Vector3(0.32f, .3f, 1));
     }
 
     //player jump
@@ -260,7 +260,7 @@ public class PlayerMovement : MonoBehaviour
     //checks if there is a ceiling above player
     private bool CeilingCheck()
     {
-        return Physics2D.BoxCast(transform.position + new Vector3(0, ceilingOffset.y, 0), new Vector2(0.3600313f, .3f), 0f, Vector2.up, 0f, groundLayer);
+        return Physics2D.BoxCast(transform.position + new Vector3(0, ceilingOffset.y, 0), new Vector2(0.32f, .3f), 0f, Vector2.up, 0f, groundLayer);
     }
 
     //create dust particle effect

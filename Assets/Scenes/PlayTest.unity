@@ -2050,6 +2050,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConcreteTube
       objectReference: {fileID: 0}
+    - target: {fileID: 1991185259380704576, guid: 2b3a2038fdebdd449a9bc4ae96497ab0, type: 3}
+      propertyPath: m_Size.y
+      value: 10.015263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991185259380704576, guid: 2b3a2038fdebdd449a9bc4ae96497ab0, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.448076
+      objectReference: {fileID: 0}
     - target: {fileID: 2201111523328533530, guid: 2b3a2038fdebdd449a9bc4ae96497ab0, type: 3}
       propertyPath: m_RootOrder
       value: 15
