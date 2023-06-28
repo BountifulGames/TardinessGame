@@ -1326,13 +1326,7 @@ MonoBehaviour:
   hiTime: 180
   midTime: 270
   lowTime: 360
-  cheer:
-  - {fileID: 8300000, guid: 24c766d1edecd6443802dceddc3ef7cd, type: 3}
-  - {fileID: 8300000, guid: 20ff72a8836916d46a9a5a21aeb989ac, type: 3}
-  - {fileID: 8300000, guid: 3d4bcfccfebba4b49bcb2b3469f3c146, type: 3}
-  - {fileID: 8300000, guid: 70befe9ca8e5a574fb7c45e292b3b294, type: 3}
-  - {fileID: 8300000, guid: 8916d7ac4d142464593e6ebdc3babb42, type: 3}
-  - {fileID: 8300000, guid: 61feb006a11535144ba4429fac1320f3, type: 3}
+  cheer: {fileID: 8300000, guid: 87912315d48699644a18f4a732212e8a, type: 3}
 --- !u!114 &1161738666
 MonoBehaviour:
   m_ObjectHideFlags: 0

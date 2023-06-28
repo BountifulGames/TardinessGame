@@ -27,8 +27,7 @@ public class WinScreen : MonoBehaviour
     public float lowTime;
 
     [Header("Sound Array")]
-    public AudioClip[] cheer;
-    private int cheerValue;
+    public AudioClip cheer;
 
     private void Start()
     {
@@ -113,37 +112,37 @@ public class WinScreen : MonoBehaviour
         {
             letterGrade.text = "A+";
             //setting audio array value
-            cheerValue = 0;
+            
         }
         else if(finalScoreValue >= 90)
         {
             letterGrade.text = "A";
             //setting audio array value
-            cheerValue = 1;
+            
         }
         else if(finalScoreValue >= 80)
         {
             letterGrade.text = "B";
             //setting audio array value
-            cheerValue = 2;
+            
         }
         else if(finalScoreValue >= 70)
         {
             letterGrade.text = "C";
             //setting audio array value
-            cheerValue = 3;
+           
         }
         else if(finalScoreValue >= 60)
         {
             letterGrade.text = "D";
             //setting audio array value
-            cheerValue = 4;
+           
         }
         else
         {
             letterGrade.text = "F";
             //setting audio array value
-            cheerValue = 5;
+            
         }
 
     }
@@ -154,9 +153,7 @@ public class WinScreen : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         //play animation
         lgAnim.SetTrigger("FinalGrade");
-        //wait again
-        yield return new WaitForSeconds(.4f);
-       // SoundManager.instance.PlaySound(cheer[cheerValue]);
+        SoundManager.instance.PlaySound(cheer);
 
     }
 
