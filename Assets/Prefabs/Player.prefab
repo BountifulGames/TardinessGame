@@ -174,7 +174,7 @@ Transform:
   - {fileID: 9156740418255087261}
   - {fileID: 2880124755725922759}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7739151445827215298
 MonoBehaviour:
@@ -200,7 +200,8 @@ MonoBehaviour:
     m_Bits: 64
   characterHolder: {fileID: 1138405582779216386}
   playerCollider: {fileID: 8021834395099942706}
-  jump: {fileID: 8300000, guid: 47c2162e92f57c1459b7223d4bae0f40, type: 3}
+  jump: {fileID: 8300000, guid: 8bc06b645659241468d16931fcac6b76, type: 3}
+  land: {fileID: 8300000, guid: 934b8a2b36e8b0f4ba1f248919f568e5, type: 3}
   mainCam: {fileID: 0}
   maxSpeed: 9
   linearDrag: 4

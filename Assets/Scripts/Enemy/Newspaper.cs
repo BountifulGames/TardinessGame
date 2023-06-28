@@ -8,6 +8,7 @@ public class Newspaper : MonoBehaviour
     public float damage;
     public SpriteRenderer sprite;
     private GameObject player;
+    public AudioClip paper;
 
     [Header("Despawn")]
     public float beginDespawn = .5f;
@@ -21,6 +22,8 @@ public class Newspaper : MonoBehaviour
         player = GameObject.Find("Player");
 
         StartCoroutine(Despawn());
+
+        SoundManager.instance.PlaySound(paper);
     }
 
 

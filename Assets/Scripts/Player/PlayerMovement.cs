@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject characterHolder;
     public CapsuleCollider2D playerCollider;
     public AudioClip jump;
+    public AudioClip land;
     public Camera mainCam;
 
     [Header("Physics")]
@@ -86,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
         if (!wasOnGround && grounded)
         {
             CreateDust();
+            SoundManager.instance.PlaySound(land);
             StartCoroutine(JumpSqueeze(1.25f, 0.8f, 0.05f));
         }
         

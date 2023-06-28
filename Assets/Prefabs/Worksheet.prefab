@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gradeValue: 10
-  pickup: {fileID: 8300000, guid: aeba9687121059d4a8463e00ed203062, type: 3}
+  pickup: {fileID: 8300000, guid: 98d45e15a114cf44f8bc9a9595c18020, type: 3}

@@ -15,6 +15,7 @@ public class OldmanEnemy : MonoBehaviour
     public LayerMask playerLayer;
     public Vector3 hitOffset;
     public Animator oldmanAnim;
+    public AudioClip whip;
 
     private void Awake()
     {
@@ -59,6 +60,8 @@ public class OldmanEnemy : MonoBehaviour
     //method triggers on specific frame event to check if player is still in range
     private void DamagePlayer()
     {
+        SoundManager.instance.PlaySound(whip);
+
         if (PlayerInSight())
         {
             //player loses grade

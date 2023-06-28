@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760759109e3861447874b122b3da842c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 10
   sprite: {fileID: 3948691455141038684}
+  paper: {fileID: 8300000, guid: 1f0d60331c7ca74419f2513d3ed4f34f, type: 3}
   beginDespawn: 2
   despawnDuration: 2
   numberOfBlinks: 5
