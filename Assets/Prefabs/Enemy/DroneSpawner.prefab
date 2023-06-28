@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee3148b35def6948a2f57e920d22428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCooldown: 10
+  spawnCooldown: 5
   spawnOffset: {x: 0, y: 0, z: 0}
-  spawnRadius: 10
+  bounds: {x: 0, y: 0, z: 0}
   dronePrefab: {fileID: 8800375097179326953, guid: 6fff7348461e7f744b8df53fc324b2ca, type: 3}
   playerLayer:
     serializedVersion: 2

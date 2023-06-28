@@ -239,8 +239,8 @@ MonoBehaviour:
   player: {fileID: 1757506242982686034}
   recoveryHealth: {fileID: 4905449741038646712, guid: 1e720278a80b0b94bbda99998f328d9d, type: 3}
   recoveryHealthForce: 24
-  playerHit1: {fileID: 8300000, guid: 68eb272e4c8505e4aba0646173135bc4, type: 3}
-  playerHit2: {fileID: 8300000, guid: d5bfe9f1ab117f84dae1fb58c0d2a603, type: 3}
+  playerHit1: {fileID: 8300000, guid: afe466c3871e5a74e9a60dd6de0ea6f7, type: 3}
+  playerHit2: {fileID: 8300000, guid: 92632cc3f23aa254a9a75093d5b2ecff, type: 3}
   iFramesDuration: 2
   numberOfBlinks: 3
 --- !u!114 &3509680914014994696

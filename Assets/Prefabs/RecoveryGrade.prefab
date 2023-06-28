@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 2314392812900684541}
   gradeValue: 1
-  pickup: {fileID: 8300000, guid: 99737a1a1f4c9b342a22727246f18905, type: 3}
+  pickup: {fileID: 8300000, guid: 5a0e10dac22aa0144838acde76c9c1e6, type: 3}
   beginDespawn: 2
   despawnDuration: 2
   numberOfBlinks: 5

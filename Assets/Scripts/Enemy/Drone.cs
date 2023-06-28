@@ -63,12 +63,12 @@ public class Drone : MonoBehaviour
         //if drone is close to player move at half speed
         if(xDifference <= slowdownDistance && yDifference <= slowdownDistance)
         {
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(player.transform.position.x, player.transform.position.y, gameObject.transform.position.z), (droneSpeed * .75f) * Time.deltaTime);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(player.transform.position.x, (player.transform.position.y -1.2f), gameObject.transform.position.z), (droneSpeed * .6f) * Time.deltaTime);
         }
         else
         {
         //move toward player at normal speed of drone
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(player.transform.position.x, player.transform.position.y, gameObject.transform.position.z), droneSpeed * Time.deltaTime);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(player.transform.position.x, player.transform.position.y -1.2f , gameObject.transform.position.z), droneSpeed * Time.deltaTime);
         }
 
     }
