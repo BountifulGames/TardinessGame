@@ -35,7 +35,12 @@ public class StageEnd : MonoBehaviour
 
     private IEnumerator LevelTransition()
     {
-        yield return new WaitForSeconds(3);
+
+        //stop player movement
+        GameManager.gm.playerMovement = false;
+        GameManager.gm.isCheckpoint = false;
+        //wait for 2 seconds
+        yield return new WaitForSeconds(2);
 
         if (SceneManager.GetActiveScene().name == "Level-1")
         {

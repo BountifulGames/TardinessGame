@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public float currentGrade;
     public bool timerOn;
 
+    [Header("Player Movement")]
+    public bool playerMovement;
+
     [Header("Score")]
     public float levelOneMin;
     public float levelTwoMin;
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Checkpoint")]
     public Vector2 checkpointLocation;
+    public bool isCheckpoint;
 
     private void Awake()
     {
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 
     public void LevelTwo()

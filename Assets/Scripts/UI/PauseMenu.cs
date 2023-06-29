@@ -53,6 +53,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Resume();
+        GameManager.gm.isCheckpoint = false;
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -71,6 +72,14 @@ public class PauseMenu : MonoBehaviour
             //pause the game
             Time.timeScale = 0f;
             gameIsPaused = true;
+    }
+
+    public void Retry()
+    {
+        //get reference for current scene
+        string currentScene = SceneManager.GetActiveScene().name;
+        //reload current scene
+        SceneManager.LoadScene(currentScene);
     }
     
 }

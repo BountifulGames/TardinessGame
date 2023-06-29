@@ -160,6 +160,7 @@ public class WinScreen : MonoBehaviour
 
     public void MainMenu()
     {
+        GameManager.gm.isCheckpoint = false;
         SceneManager.LoadScene("MainMenu");
     }
 

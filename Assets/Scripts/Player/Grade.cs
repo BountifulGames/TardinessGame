@@ -19,6 +19,8 @@ public class Grade : MonoBehaviour
     public float recoveryHealthForce;
     public AudioClip playerHit1;
     public AudioClip playerHit2;
+    public GameObject gameOverPanel;
+    public Animator gameOver;
     
 
     [Header("iFrames")]
@@ -32,13 +34,17 @@ public class Grade : MonoBehaviour
         GameManager.gm.currentGrade = startingGrade;
         Debug.Log(GameManager.gm.currentGrade);
         gradeText.text = "Grade: " + GameManager.gm.currentGrade;
+        //reset to default timeScale
+        Time.timeScale = 1f;
+        //reset to default player&enemy collision logic
+        Physics2D.IgnoreLayerCollision(7, 9, false);
     }
 
     public void LoseGrade(float _grade)
     {
         if (GameManager.gm.currentGrade == 0)
         {
-            //game over
+            StartCoroutine(GameOver());
             Debug.Log("Game Over");
         }
 
@@ -103,4 +109,19 @@ public class Grade : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 9, false);
     }
 
+
+    private IEnumerator GameOver()
+    {
+        //stop collisions
+        Physics2D.IgnoreLayerCollision(7, 9, true);
+        //stop player movement
+        GameManager.gm.playerMovement = false;
+        //turn on gameOverPanel
+        gameOverPanel.SetActive(true);
+        //play game over transition
+        gameOver.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(3);
+        //freeze game logic
+        Time.timeScale = 0f;
+    }
 }

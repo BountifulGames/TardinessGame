@@ -3,18 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEditor.SearchService;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 90;
+    public float timerStartValue = 90;
+    private float timeValue;
     public TMP_Text timerText;
     private float minutes;
     private float seconds;
+    private string scene;
 
 
     private void Start()
     {
         GameManager.gm.timerOn = true;
+        scene = SceneManager.GetActiveScene().name;
+
+        if (GameManager.gm.isCheckpoint)
+        {
+            if (scene == "Level-1")
+            { 
+            timeValue = (GameManager.gm.levelOneMin *60 + GameManager.gm.levelOneSec);
+                Debug.Log(timeValue);
+            }
+            else if (scene == "Level-2")
+            {
+                timeValue = (GameManager.gm.levelTwoMin * 60 + GameManager.gm.levelTwoSec);
+                Debug.Log(timeValue);
+            }
+            else
+            {
+                Debug.Log("Timer scene error");
+                Debug.Log(timeValue);
+            }
+        }
+        else
+        {
+            timeValue = timerStartValue;
+        }
     }
 
     // Update is called once per frame
@@ -62,11 +89,9 @@ public class Timer : MonoBehaviour
     public void RecordTime()
     {
         //gameManager
-
-        Scene scene = SceneManager.GetActiveScene();
         Debug.Log(scene);
 
-        if (scene.name == "Level-1")
+        if (scene == "Level-1")
         {
           GameManager.gm.levelOneMin = minutes;
           GameManager.gm.levelOneSec = seconds;
@@ -74,7 +99,7 @@ public class Timer : MonoBehaviour
           Debug.Log(GameManager.gm.levelOneMin + "min");
           Debug.Log(GameManager.gm.levelOneSec + "sec");
         }
-        else if (scene.name == "Level-2")
+        else if (scene == "Level-2")
         {
                 GameManager.gm.levelTwoMin = minutes;
                 GameManager.gm.levelTwoSec = seconds;

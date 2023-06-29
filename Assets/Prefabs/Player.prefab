@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d35b4f9d6300049bd8140198f2768e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingGrade: 50
-  maxGrade: 110
+  startingGrade: 30
+  maxGrade: 10
   currentGrade: 0
   gradeText: {fileID: 0}
   player: {fileID: 1757506242982686034}
@@ -241,6 +241,7 @@ MonoBehaviour:
   recoveryHealthForce: 24
   playerHit1: {fileID: 8300000, guid: afe466c3871e5a74e9a60dd6de0ea6f7, type: 3}
   playerHit2: {fileID: 8300000, guid: 92632cc3f23aa254a9a75093d5b2ecff, type: 3}
+  gameOverPanel: {fileID: 0}
   iFramesDuration: 2
   numberOfBlinks: 3
 --- !u!114 &3509680914014994696

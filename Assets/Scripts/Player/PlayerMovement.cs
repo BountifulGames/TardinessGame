@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public LayerMask groundLayer;
+    public LayerMask enemyLayer;
     public GameObject characterHolder;
     public CapsuleCollider2D playerCollider;
     public AudioClip jump;
@@ -62,9 +63,24 @@ public class PlayerMovement : MonoBehaviour
         normalOffset = playerCollider.offset;
         normalSize = playerCollider.size;
 
-}
+        //reset player movement to true on start
+        GameManager.gm.playerMovement = true;
+
+        if(GameManager.gm.checkpointLocation != null)
+        {
+            rb.transform.position = GameManager.gm.checkpointLocation;
+        }
+    }
+
     void Update()
     {
+        if(!GameManager.gm.playerMovement)
+        {
+            rb.velocity = new Vector2(0, 0);
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            return;
+        }
+        
         bool wasOnGround = grounded;
 
         //checks if either foot(raycast) is touching ground

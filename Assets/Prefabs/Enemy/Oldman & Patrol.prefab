@@ -128,6 +128,7 @@ MonoBehaviour:
     m_Bits: 128
   hitOffset: {x: -6.33, y: 0, z: 0}
   oldmanAnim: {fileID: 4024178450227186321}
+  whip: {fileID: 8300000, guid: 14f84f4e3abacd94fa9101ee1d7b13d8, type: 3}
 --- !u!61 &3454272350870222462
 BoxCollider2D:
   m_ObjectHideFlags: 0
