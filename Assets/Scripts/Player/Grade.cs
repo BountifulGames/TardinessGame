@@ -112,6 +112,8 @@ public class Grade : MonoBehaviour
 
     private IEnumerator GameOver()
     {
+        //stop timer
+        GameManager.gm.timerOn = false;
         //stop collisions
         Physics2D.IgnoreLayerCollision(7, 9, true);
         //stop player movement

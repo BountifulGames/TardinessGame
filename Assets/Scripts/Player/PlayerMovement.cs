@@ -66,10 +66,19 @@ public class PlayerMovement : MonoBehaviour
         //reset player movement to true on start
         GameManager.gm.playerMovement = true;
 
-        if(GameManager.gm.checkpointLocation != null)
+        //check for checkpoint
+        if(GameManager.gm.isCheckpoint)
         {
+            //spawn at checkpoint
             rb.transform.position = GameManager.gm.checkpointLocation;
         }
+        else
+        {
+            //spawn is new checkpoint
+            GameManager.gm.checkpointLocation = rb.transform.position;
+        }
+
+
     }
 
     void Update()
@@ -292,7 +301,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.transform.position = GameManager.gm.checkpointLocation;
             mainCam.transform.position = new Vector3(GameManager.gm.checkpointLocation.x, 0f, -10f);
-            GameManager.gm.currentGrade -= 10;
+            GetComponent<Grade>().LoseGrade(10);
 
             if (GameManager.gm.currentGrade <= 0)
             {
