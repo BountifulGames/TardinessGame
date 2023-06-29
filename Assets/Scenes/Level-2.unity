@@ -764,6 +764,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1931620240382599264, guid: e6dbc8f9e01ba67468070a47710e9fae, type: 3}
+      propertyPath: timerStartValue
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5801425562268307374, guid: e6dbc8f9e01ba67468070a47710e9fae, type: 3}
       propertyPath: m_IsActive
       value: 0
