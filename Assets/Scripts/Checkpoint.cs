@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    public SpriteRenderer sign;
+    //public SpriteRenderer sign;
     private bool checkpointClicked;
     private GameObject timer;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +25,18 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!checkpointClicked) 
+        if (other.tag == "Player")
         {
-            GameManager.gm.checkpointLocation = new Vector2(other.transform.position.x, other.transform.position.y + 1);
-            timer.GetComponent<Timer>().RecordTime();
-            sign.color = Color.green;
-            checkpointClicked = true;
-            GameManager.gm.isCheckpoint = true;
+
+            if (!checkpointClicked)
+            {
+                GameManager.gm.checkpointLocation = new Vector2(other.transform.position.x, other.transform.position.y + 1);
+                timer.GetComponent<Timer>().RecordTime();
+                anim.SetTrigger("Checkpoint");
+                //sign.color = Color.green;
+                checkpointClicked = true;
+                GameManager.gm.isCheckpoint = true;
+            }
         }
     }
 }
