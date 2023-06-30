@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07840951, g: 0.481767, b: 0.6198617, a: 1}
+  m_IndirectSpecularColor: {r: 0.07840951, g: 0.4817673, b: 0.6198597, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3864,7 +3864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: -2.6699996, z: -15}
+  m_LocalPosition: {x: 0.88888884, y: -2.67, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5436,7 +5436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705488755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: -2.6699996, z: -15}
+  m_LocalPosition: {x: 0.88888884, y: -2.67, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10399,7 +10399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2820762016517127432, guid: 813005c4a6dfd364588f1e8d9111b161, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.27
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2820762016517127432, guid: 813005c4a6dfd364588f1e8d9111b161, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15471,7 +15471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2820762016517127432, guid: 813005c4a6dfd364588f1e8d9111b161, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9
+      value: -3.23
       objectReference: {fileID: 0}
     - target: {fileID: 2820762016517127432, guid: 813005c4a6dfd364588f1e8d9111b161, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17953,15 +17953,15 @@ MonoBehaviour:
   m_LookaheadTime: 0.3
   m_LookaheadSmoothing: 5
   m_LookaheadIgnoreY: 1
-  m_XDamping: 1
-  m_YDamping: 1
+  m_XDamping: 0.1
+  m_YDamping: 0.1
   m_ZDamping: 0
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.5
+  m_ScreenX: 0.45
   m_ScreenY: 0.425
   m_CameraDistance: 15
   m_DeadZoneWidth: 0.2
-  m_DeadZoneHeight: 0.303
+  m_DeadZoneHeight: 0.1
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
