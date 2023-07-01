@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -11,8 +12,27 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public TMP_Text soundText;
     public TMP_Text musicText;
+    public Slider volumeSlider;
+    public Button soundButton;
+    public GameObject timerIcon;
+    public GameObject grade;
+
+    private float alpha; 
+    private Color timerCol;
+    private Color gradeCol;
 
     // Update is called once per frame
+    private void Start()
+    {
+        alpha = 0.5f;
+
+        timerCol = GetComponent<RawImage>().color;
+        timerCol.a = alpha;
+        gradeCol = GetComponent<Renderer>().material.color;
+        gradeCol.a = alpha;
+        
+    }
+
     void Update()
     {
         if(!GameManager.gm.playerMovement)
@@ -25,17 +45,20 @@ public class PauseMenu : MonoBehaviour
         {
             if (gameIsPaused)
             {
+                ResetMenu();
                 Resume();
             }
             else
             {
                 Pause();
+                //timerIcon.GetComponent<RawImage>().color.a = timerCol;
             }
         }
     }
         
     public void Resume()
         {
+            ResetMenu();
             pauseMenuUI.SetActive(false);
             //game time back to default
             Time.timeScale = 1f;
@@ -45,12 +68,15 @@ public class PauseMenu : MonoBehaviour
         
     public void Sound()
     {
-        soundText.text = "Sound: ";
+        ResetMenu();
+        soundButton.gameObject.SetActive(false);
+        volumeSlider.gameObject.SetActive(true);
     }
 
         
     public void Music()
     {
+        ResetMenu();
         musicText.text = "Music: ";
     }
 
@@ -86,6 +112,19 @@ public class PauseMenu : MonoBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
         //reload current scene
         SceneManager.LoadScene(currentScene);
+    }
+
+    public void ChangeVolume()
+    {
+        AudioListener.volume = volumeSlider.value;
+    }
+
+    public void ResetMenu()
+    {
+        volumeSlider.gameObject.SetActive(false);
+        soundButton.gameObject.SetActive(true);
+
+
     }
     
 }
