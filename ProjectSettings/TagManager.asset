@@ -9,6 +9,8 @@ TagManager:
   - OneWayPlatform
   - Hitbox
   - Timer
+  - Transition
+  - Deathzone
   layers:
   - Default
   - TransparentFX
@@ -54,4 +56,4 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3834117507
-    locked: 0
+    locked: 1
