@@ -17,30 +17,39 @@ public class PauseMenu : MonoBehaviour
     public GameObject timerIcon;
     public GameObject grade;
 
-    private float alpha; 
+    private float alpha;
     private Color timerCol;
     private Color gradeCol;
+
+    private float soundValue;
+    private float musicValue;
 
     // Update is called once per frame
     private void Start()
     {
-        alpha = 0.5f;
+        // alpha = 0.5f;
 
-        timerCol = GetComponent<RawImage>().color;
-        timerCol.a = alpha;
-        gradeCol = GetComponent<Renderer>().material.color;
-        gradeCol.a = alpha;
-        
+        //timerCol = GetComponent<RawImage>().color;
+        // timerCol.a = alpha;
+        // gradeCol = GetComponent<Renderer>().material.color;
+        // gradeCol.a = alpha;
+
+        soundValue = PlayerPrefs.GetFloat("soundVolume") * 100;
+        soundText.text = "Sound: " + soundValue.ToString();
+
+       musicValue = PlayerPrefs.GetFloat("musicVolume") * 100;
+       musicText.text = "Music: " + soundValue.ToString();
+
     }
 
     void Update()
     {
-        if(!GameManager.gm.playerMovement)
+        if (!GameManager.gm.playerMovement)
         {
             pauseMenuUI.SetActive(false);
             return;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)
@@ -55,29 +64,35 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-        
+
     public void Resume()
-        {
-            ResetMenu();
-            pauseMenuUI.SetActive(false);
-            //game time back to default
+        { 
             Time.timeScale = 1f;
-            gameIsPaused = false;
+        pauseMenuUI.SetActive(false);
+        gameIsPaused = false;
         }
         
         
     public void Sound()
     {
-        ResetMenu();
-        soundButton.gameObject.SetActive(false);
-        volumeSlider.gameObject.SetActive(true);
+        SoundManager.instance.SoundVolume(0.2f);
+        soundValue = PlayerPrefs.GetFloat("soundVolume") * 100;
+        soundText.text = "Sound: " + soundValue.ToString();
+
+
+        //ResetMenu();
+        //soundButton.gameObject.SetActive(false);
+        //volumeSlider.gameObject.SetActive(true);
     }
 
         
     public void Music()
     {
-        ResetMenu();
-        musicText.text = "Music: ";
+        //ResetMenu();
+
+        SoundManager.instance.MusicVolume(0.2f);
+        float volumeValue = PlayerPrefs.GetFloat("musicVolume") * 100;
+        musicText.text = "Music: " + volumeValue.ToString();
     }
 
 
@@ -116,13 +131,13 @@ public class PauseMenu : MonoBehaviour
 
     public void ChangeVolume()
     {
-        AudioListener.volume = volumeSlider.value;
+       // AudioListener.volume = volumeSlider.value;
     }
 
     public void ResetMenu()
     {
-        volumeSlider.gameObject.SetActive(false);
-        soundButton.gameObject.SetActive(true);
+       // volumeSlider.gameObject.SetActive(false);
+       // soundButton.gameObject.SetActive(true);
 
 
     }
