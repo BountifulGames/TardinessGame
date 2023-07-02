@@ -16,6 +16,11 @@ public class TitleScreen : MonoBehaviour
         SceneManager.LoadScene("Help");
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
