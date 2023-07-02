@@ -544,6 +544,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 700220219880297086, guid: 79cf446d5b06c6343863daf0ca36a2f2, type: 3}
+      propertyPath: m_Name
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 5370868812503769591, guid: 79cf446d5b06c6343863daf0ca36a2f2, type: 3}
       propertyPath: m_Name
       value: Back Button

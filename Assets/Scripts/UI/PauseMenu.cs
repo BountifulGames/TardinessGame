@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
         soundText.text = "Sound: " + soundValue.ToString();
 
        musicValue = PlayerPrefs.GetFloat("musicVolume") * 100;
-       musicText.text = "Music: " + soundValue.ToString();
+       musicText.text = "Music: " + musicValue.ToString();
 
     }
 
