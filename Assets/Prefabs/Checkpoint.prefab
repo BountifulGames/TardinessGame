@@ -166,3 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8254886803567916662}
+  checkpoint: {fileID: 8300000, guid: f4b6f4fa991d81c4285b12f8da7e3357, type: 3}

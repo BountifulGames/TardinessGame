@@ -9,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     private bool checkpointClicked;
     private GameObject timer;
     public Animator anim;
+    public AudioClip checkpoint;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class Checkpoint : MonoBehaviour
                 //sign.color = Color.green;
                 checkpointClicked = true;
                 GameManager.gm.isCheckpoint = true;
+                SoundManager.instance.PlaySound(checkpoint, 1);
             }
         }
     }

@@ -300,7 +300,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Deathzone"))
         {
             rb.transform.position = GameManager.gm.checkpointLocation;
-            mainCam.transform.position = new Vector3(GameManager.gm.checkpointLocation.x, 0f, -10f);
+            mainCam.transform.position = new Vector3(GameManager.gm.checkpointLocation.x, 0f, -7f);
             GetComponent<Grade>().LoseGrade(10);
 
             if (GameManager.gm.currentGrade <= 0)
