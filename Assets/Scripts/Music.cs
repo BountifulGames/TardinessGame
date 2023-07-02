@@ -7,6 +7,7 @@ public class Music : MonoBehaviour
 {
     public AudioClip stage1;
     public AudioClip stage2;
+    public AudioClip menu;
 
     private AudioSource music;
 
@@ -40,9 +41,19 @@ public class Music : MonoBehaviour
         {
             music.clip = stage2;
         }
-        else 
+        else if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Win")
         {
-            music.Stop();
+            if (music.clip == menu)
+            {
+                return;
+            }
+            else
+            {
+                music.clip = menu;
+            }
+        }
+        else
+        {
             return;
         }
         
