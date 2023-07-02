@@ -55,7 +55,7 @@ public class Grade : MonoBehaviour
             StartCoroutine(Invulnerability());
 
             //spawn 3 recoveryHealth prefabs going left/middle/right
-            SoundManager.instance.PlaySound(playerHit2);
+            SoundManager.instance.PlaySound(playerHit2, .7f);
             float x = Random.Range(-1, -.725f);
             DropGrade(x);
             float y = Random.Range(-.775f, .225f);
@@ -69,7 +69,7 @@ public class Grade : MonoBehaviour
         {
             //player goes down to 0 with no pickups
             StartCoroutine(Invulnerability());
-            SoundManager.instance.PlaySound(playerHit1);
+            SoundManager.instance.PlaySound(playerHit1, .7f);
             gradeText.text = "Grade: " + GameManager.gm.currentGrade;
         }
         
@@ -84,7 +84,7 @@ public class Grade : MonoBehaviour
 
     private void DropGrade(float random)
     {
-        SoundManager.instance.PlaySound(playerHit2);
+        SoundManager.instance.PlaySound(playerHit2, .7f);
         var instance = Instantiate(recoveryHealth, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity);
 
         //upward force in a random horizontal direction & randomized force

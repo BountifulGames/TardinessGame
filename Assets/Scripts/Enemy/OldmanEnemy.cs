@@ -60,7 +60,7 @@ public class OldmanEnemy : MonoBehaviour
     //method triggers on specific frame event to check if player is still in range
     private void DamagePlayer()
     {
-        SoundManager.instance.PlaySound(whip);
+        SoundManager.instance.PlaySound(whip, 1);
 
         if (PlayerInSight())
         {

@@ -28,10 +28,10 @@ public class SoundManager : MonoBehaviour
         MusicVolume(0);
     }
 
-    public void PlaySound(AudioClip _sound)
+    public void PlaySound(AudioClip _sound, float _scale)
     {
         //plays sound effect once
-        audioSource.PlayOneShot(_sound);
+        audioSource.PlayOneShot(_sound, _scale);
     }
 
     public void SoundVolume (float _change)

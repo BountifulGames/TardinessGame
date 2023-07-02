@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         if (!wasOnGround && grounded)
         {
             CreateDust();
-            SoundManager.instance.PlaySound(land);
+            SoundManager.instance.PlaySound(land, 0.5f);
             StartCoroutine(JumpSqueeze(1.25f, 0.8f, 0.05f));
         }
         
@@ -251,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
         jumpTimer = 0;
         CreateDust();
         StartCoroutine(JumpSqueeze(0.5f, 1.2f, 0.1f));
-        SoundManager.instance.PlaySound(jump);
+        SoundManager.instance.PlaySound(jump, 1);
     }
     
     //squash and stretch player animation while jumping or landing

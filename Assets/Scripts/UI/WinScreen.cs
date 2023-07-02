@@ -153,7 +153,7 @@ public class WinScreen : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         //play animation
         lgAnim.SetTrigger("FinalGrade");
-        SoundManager.instance.PlaySound(cheer);
+        SoundManager.instance.PlaySound(cheer, 1);
 
     }
 

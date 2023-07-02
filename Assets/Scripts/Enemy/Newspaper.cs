@@ -23,7 +23,7 @@ public class Newspaper : MonoBehaviour
 
         StartCoroutine(Despawn());
 
-        SoundManager.instance.PlaySound(paper);
+        SoundManager.instance.PlaySound(paper, 1);
     }
 
 

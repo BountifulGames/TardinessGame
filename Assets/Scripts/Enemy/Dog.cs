@@ -34,7 +34,7 @@ public class Dog : MonoBehaviour
             if(!barkPlayed)
             {
                 //play sound once
-                SoundManager.instance.PlaySound(bark);
+                SoundManager.instance.PlaySound(bark, 1);
                 barkPlayed = true;
             }
             

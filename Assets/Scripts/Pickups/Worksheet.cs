@@ -13,7 +13,7 @@ public class Worksheet : MonoBehaviour
         {
             //player gains grade
             collision.GetComponent<Grade>().GainGrade(gradeValue);
-            SoundManager.instance.PlaySound(pickup);
+            SoundManager.instance.PlaySound(pickup, 1);
             Destroy(gameObject);
         }
     }
