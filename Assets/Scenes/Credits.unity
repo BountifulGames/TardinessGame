@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 252807766}
   - component: {fileID: 252807770}
   m_Layer: 5
-  m_Name: HelpCanvas
+  m_Name: CreditsCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -661,10 +661,10 @@ RectTransform:
   m_Father: {fileID: 252807769}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.012791667, y: 0.032851852}
-  m_AnchorMax: {x: 0.36885422, y: 0.293}
-  m_AnchoredPosition: {x: 955, y: 177.22162}
-  m_SizeDelta: {x: -490.24878, y: -228.8432}
+  m_AnchorMin: {x: 0.43522915, y: 0.029148148}
+  m_AnchorMax: {x: 0.99000007, y: 0.293}
+  m_AnchoredPosition: {x: -47, y: 179.22162}
+  m_SizeDelta: {x: -872.2488, y: -232.8432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423478817
 MonoBehaviour:
@@ -690,13 +690,17 @@ MonoBehaviour:
 
     opengameart.org/content/pixel-art-simple-trees
 
+
     "single
     dog bark 1" - crazymonke9
 
     freesound.org/people/crazymonke9/sounds/418107/
 
 
-'
+    "Press
+    Start 2P" - CodeMan38
+
+    fonts.google.com/specimen/Press+Start+2P'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d8c698bc43856ec4c8084468f7f189c9, type: 2}
   m_sharedMaterial: {fileID: 3365914241877668667, guid: d8c698bc43856ec4c8084468f7f189c9, type: 2}
@@ -723,7 +727,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.95
+  m_fontSize: 22.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -759,7 +763,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -357.6275, y: 62.290924, z: -482.38348, w: -294.10394}
+  m_margin: {x: -389.50085, y: 62.290924, z: -482.38348, w: -294.10394}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1239,6 +1243,8 @@ MonoBehaviour:
     Dog & Recovery
     Sprites
 
+    Bus Sign Sprites & Animation
+
     8-Bit Sound Effects'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d8c698bc43856ec4c8084468f7f189c9, type: 2}
@@ -1266,7 +1272,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31
+  m_fontSize: 24.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
