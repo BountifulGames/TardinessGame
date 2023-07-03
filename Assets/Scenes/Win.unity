@@ -1446,9 +1446,9 @@ MonoBehaviour:
   finalScore: {fileID: 475712701}
   letterGrade: {fileID: 209376690}
   lgAnim: {fileID: 209376692}
-  hiTime: 180
-  midTime: 270
-  lowTime: 360
+  hiTime: 300
+  midTime: 240
+  lowTime: 180
   cheer: {fileID: 8300000, guid: 87912315d48699644a18f4a732212e8a, type: 3}
 --- !u!114 &1161738666
 MonoBehaviour:

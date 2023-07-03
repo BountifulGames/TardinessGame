@@ -17743,7 +17743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1931620240382599264, guid: e6dbc8f9e01ba67468070a47710e9fae, type: 3}
       propertyPath: timerStartValue
-      value: 300
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 2246283659995188036, guid: e6dbc8f9e01ba67468070a47710e9fae, type: 3}
       propertyPath: m_fontSize
