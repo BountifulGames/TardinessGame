@@ -33,7 +33,7 @@ public class Grade : MonoBehaviour
     {
         GameManager.gm.currentGrade = startingGrade;
         Debug.Log(GameManager.gm.currentGrade);
-        gradeText.text = "Grade: " + GameManager.gm.currentGrade;
+        gradeText.text = "" + GameManager.gm.currentGrade;
         //reset to default timeScale
         Time.timeScale = 1f;
         //reset to default player&enemy collision logic
@@ -63,14 +63,14 @@ public class Grade : MonoBehaviour
             float z = Random.Range(.275f, 1f);
             DropGrade(z);
 
-            gradeText.text = "Grade: " + GameManager.gm.currentGrade;
+            gradeText.text = "" + GameManager.gm.currentGrade;
         }
         else
         {
             //player goes down to 0 with no pickups
             StartCoroutine(Invulnerability());
             SoundManager.instance.PlaySound(playerHit1, .7f);
-            gradeText.text = "Grade: " + GameManager.gm.currentGrade;
+            gradeText.text = "" + GameManager.gm.currentGrade;
         }
         
     }
@@ -78,7 +78,7 @@ public class Grade : MonoBehaviour
     public void GainGrade(float _grade)
     {
         GameManager.gm.currentGrade = Mathf.Clamp(GameManager.gm.currentGrade + _grade, 0, maxGrade);
-        gradeText.text = "Grade: " + GameManager.gm.currentGrade;
+        gradeText.text = "" + GameManager.gm.currentGrade;
         Debug.Log(GameManager.gm.currentGrade);
     }
 
